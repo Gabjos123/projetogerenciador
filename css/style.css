@@ -1,0 +1,36 @@
+body {
+    background-image: url(../img/mario.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+  }
+
+  h1 {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+ }
+ 
+  button {
+    align-items: center;
+    width: 300px;
+    height: 200;
+    display:auto;
+    margin-right: 80px;
+    margin-left: 113px;
+    background-color: #ff000038;
+    color: #fff;
+    border: indianred;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    margin-bottom: auto;
+    
+  }
+
+  #tarefas {
+    margin-top: 5px;
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+  }

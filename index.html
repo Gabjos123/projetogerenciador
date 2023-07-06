@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+  <h1>Lista de Tarefas</h1>
+
+  <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+  <button onclick="exibirTarefas()">Exibir Tarefas</button>
+  <button onclick="removerTarefa()">Remover Tarefa</button>
+
+  <div id="tarefas"></div>
+
+  <script>
+    var listaTarefas = [];
+
+    function adicionarTarefa() {
+      var tarefa = prompt("Digite a nova tarefa:");
+      listaTarefas.push(tarefa);
+      console.log("Tarefa adicionada: " + tarefa);
+    }
+
+    function exibirTarefas() {
+      var tarefasDiv = document.getElementById("tarefas");
+      tarefasDiv.innerHTML = ""; // Limpa o conteúdo anterior
+
+      if (listaTarefas.length === 0) {
+        tarefasDiv.innerHTML = "Nenhuma tarefa na lista.";
+      } else {
+        var listaHTML = "<ul>";
+        listaTarefas.forEach(function(tarefa, indice) {
+          listaHTML += "<li>" + tarefa + "</li>";
+        });
+        listaHTML += "</ul>";
+        tarefasDiv.innerHTML = listaHTML;
+      }
+    }
+
+    function removerTarefa() {
+      var indice = prompt("Digite o número da tarefa que deseja remover:");
+      var tarefaRemovida = listaTarefas.splice(indice - 1, 1);
+      console.log("Tarefa removida: " + tarefaRemovida);
+    }
+  </script>
+</body>
+</html>
